@@ -147,3 +147,6 @@ docker build -t dweek13:0.1 .
 docker run -p 80:80 dweek13:0.1   
 ```
 
+Screen shot of the output
+![output](templates/ss.png)
+

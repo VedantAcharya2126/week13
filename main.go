@@ -19,7 +19,7 @@ type TimeResponse struct {
 
 func initDB() error {
 	var err error
-	db, err = sql.Open("mysql", "root:12345678@tcp(0.0.0.0:3306)/week13Lab")
+	db, err = sql.Open("mysql", "root:12345678@tcp(127.0.0.1:3306)/week13Lab")
 	if err != nil {
 		return err
 	}
@@ -68,6 +68,6 @@ func main() {
 
 	// Set up HTTP server
 	http.HandleFunc("/current-time", currentTimeHandler)
-	fmt.Println("Server is running on http://localhost:8080")
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	fmt.Println("Server is running on http://localhost:80")
+	log.Fatal(http.ListenAndServe(":80", nil))
 }
